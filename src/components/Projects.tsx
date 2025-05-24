@@ -4,35 +4,42 @@ import { ExternalLink, Github } from 'lucide-react';
 
 const projects = [
   {
-    title: '🧠 BrainWave RAG Assistant',
+    title: '🧠 BrainWave RAG Assistant 🚀 Top Project',
     description:
-      'An AI-powered assistant that allows users to upload documents or code files and ask intelligent questions. Built using LangChain, Streamlit, and OpenAI, it uses Retrieval-Augmented Generation (RAG) for context-aware responses.',
-    tech: ['Streamlit', 'LangChain', 'OpenAI API', 'FAISS'],
+      'An AI assistant that supports document/code upload and gives smart answers using RAG (LangChain, FAISS, Streamlit, OpenAI).',
+    tech: ['Streamlit', 'LangChain', 'FAISS', 'OpenAI'],
     demo: 'https://brainwaverag.streamlit.app/',
+    github: 'https://github.com/your-username/brainwave-rag', // Add if public
+    isFeatured: true, // Custom flag to style it differently
   },
   {
     title: 'AI Caption & Hashtag Generator',
-    description: 'Developed an AI-powered tool to generate image captions and trending hashtags using deep learning and NLP techniques.',
+    description:
+      'Developed an AI-powered tool to generate image captions and trending hashtags using deep learning and NLP techniques.',
     tech: ['Python', 'OpenCV', 'TensorFlow', 'PyTorch'],
     github: 'https://github.com/Manishkumarsingh41/aicaption-hastagtool',
   },
   {
     title: 'Rule-Based Chatbot Response System',
-    description: 'Created a chatbot that responds to user queries based on predefined rules and keyword recognition.',
+    description:
+      'Created a chatbot that responds to user queries based on predefined rules and keyword recognition.',
     tech: ['Python', 'Flask', 'NLP'],
   },
   {
     title: 'Face Detection System',
-    description: 'Implemented a real-time face detection system that accurately detects and recognizes faces in images and live video feeds.',
+    description:
+      'Implemented a real-time face detection system that accurately detects and recognizes faces in images and live video feeds.',
     tech: ['Python', 'OpenCV', 'Haar Cascade Classifiers', 'XML'],
   },
   {
     title: 'Sentiment Analysis Bot',
-    description: "Built a sentiment analysis system capable of classifying text as positive, negative, or neutral using Hugging Face's Transformer models.",
+    description:
+      "Built a sentiment analysis system capable of classifying text as positive, negative, or neutral using Hugging Face's Transformer models.",
     tech: ['Python', 'Hugging Face', 'NLP'],
     demo: 'https://iamanishsinghrajput-meggi.hf.space',
   },
 ];
+
 
 export const Projects = () => {
   const [ref, inView] = useInView({
