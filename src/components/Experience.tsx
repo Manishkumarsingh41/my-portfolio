@@ -34,6 +34,21 @@ export const Experience = () => {
 
             <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg shadow-lg">
               <h4 className="text-xl font-semibold">Data Scientist Intern</h4>
+              <p className="text-gray-600 dark:text-gray-400">SkillCraft Technology | IT Product & Services</p>
+              <p className="text-sm text-gray-500 dark:text-gray-500">01 Apr, 2025 – 30 Apr, 2025 | Remote</p>
+              <p className="mt-2 text-gray-600 dark:text-gray-400">
+                <strong>Key Skills:</strong> NumPy, Reporting, EDA, Data Cleaning, Statistical Analysis, Pandas, Matplotlib, Seaborn, Data Preprocessing
+              </p>
+              <ul className="mt-4 space-y-2 list-disc list-inside text-gray-600 dark:text-gray-400">
+                <li>Worked on real-world datasets to apply and enhance data analysis, visualization, and EDA skills</li>
+                <li>Cleaned and preprocessed data to extract insights</li>
+                <li>Presented analytical findings to support data-driven decisions</li>
+                <li>Completed three major analytical tasks during the internship</li>
+              </ul>
+            </div>
+
+            <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg shadow-lg">
+              <h4 className="text-xl font-semibold">Data Scientist Intern</h4>
               <p className="text-gray-600 dark:text-gray-400">HEX SOFTWARES INNOVATE</p>
               <p className="text-sm text-gray-500 dark:text-gray-500">February 2025 – March 2025 | Remote</p>
               <ul className="mt-4 space-y-2 list-disc list-inside text-gray-600 dark:text-gray-400">

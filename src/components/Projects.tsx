@@ -9,7 +9,7 @@ const projects = [
       'An AI assistant that supports document/code upload and gives smart answers using RAG (LangChain, FAISS, Streamlit, OpenAI).',
     tech: ['Streamlit', 'LangChain', 'FAISS', 'OpenAI'],
     demo: 'https://brainwaverag.streamlit.app/',
-    github: 'https://github.com/your-username/brainwave-rag', // Replace with your actual repo URL if public
+    github: 'https://github.com/Manishkumarsingh41/brainwave-rag-app', // Replace with your actual repo URL if public
     isFeatured: true,
   },
   {
@@ -63,58 +63,77 @@ export const Projects = () => {
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-8">
-          {projects.map((project, index) => (
-            <motion.div
-              key={project.title}
-              initial={{ opacity: 0, y: 20 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className={`rounded-lg shadow-lg overflow-hidden ${
-                project.isFeatured
-                  ? 'bg-yellow-100 dark:bg-yellow-900 border-2 border-yellow-400'
-                  : 'bg-white dark:bg-gray-900'
-              }`}
-            >
-              <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-                <p className="text-gray-600 dark:text-gray-400 mb-4">{project.description}</p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.tech.map((tech) => (
-                    <span
-                      key={tech}
-                      className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm"
-                    >
-                      {tech}
-                    </span>
-                  ))}
+          {projects.map((project, index) => {
+            // Extract badge and clean title for featured projects
+            let badge = null;
+            let cleanTitle = project.title;
+            if (project.isFeatured) {
+              const badgeMatch = project.title.match(/(🚀 Top Project)/);
+              if (badgeMatch) {
+                badge = badgeMatch[1];
+                cleanTitle = project.title.replace(/\s*🚀 Top Project/, '').trim();
+              }
+            }
+            return (
+              <motion.div
+                key={project.title}
+                initial={{ opacity: 0, y: 20 }}
+                animate={inView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className={`rounded-lg shadow-lg overflow-hidden ${
+                  project.isFeatured
+                    ? 'bg-yellow-100 dark:bg-yellow-900 border-2 border-yellow-400'
+                    : 'bg-white dark:bg-gray-900'
+                }`}
+              >
+                <div className="p-6">
+                  <div className="flex items-center mb-2 gap-2">
+                    <h3 className="text-xl font-semibold">{cleanTitle}</h3>
+                    {project.isFeatured && badge && (
+                      <span className="px-2 py-0.5 bg-yellow-300 dark:bg-yellow-700 text-yellow-900 dark:text-yellow-100 rounded-full text-xs font-semibold">
+                        {badge}
+                      </span>
+                    )}
+                  </div>
+                  <p className="text-gray-600 dark:text-gray-400 mb-4">{project.description}</p>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {project.tech.map((tech) => (
+                      <span
+                        key={tech}
+                        className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                  <div className="flex space-x-4">
+                    {project.github && (
+                      <motion.a
+                        whileHover={{ scale: 1.05 }}
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400"
+                      >
+                        <Github className="w-5 h-5 mr-1" /> Code
+                      </motion.a>
+                    )}
+                    {project.demo && (
+                      <motion.a
+                        whileHover={{ scale: 1.05 }}
+                        href={project.demo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400"
+                      >
+                        <ExternalLink className="w-5 h-5 mr-1" /> Live Demo
+                      </motion.a>
+                    )}
+                  </div>
                 </div>
-                <div className="flex space-x-4">
-                  {project.github && (
-                    <motion.a
-                      whileHover={{ scale: 1.05 }}
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400"
-                    >
-                      <Github className="w-5 h-5 mr-1" /> Code
-                    </motion.a>
-                  )}
-                  {project.demo && (
-                    <motion.a
-                      whileHover={{ scale: 1.05 }}
-                      href={project.demo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400"
-                    >
-                      <ExternalLink className="w-5 h-5 mr-1" /> Live Demo
-                    </motion.a>
-                  )}
-                </div>
-              </div>
-            </motion.div>
-          ))}
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </section>
