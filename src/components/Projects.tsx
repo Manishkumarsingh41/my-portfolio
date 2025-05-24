@@ -9,8 +9,8 @@ const projects = [
       'An AI assistant that supports document/code upload and gives smart answers using RAG (LangChain, FAISS, Streamlit, OpenAI).',
     tech: ['Streamlit', 'LangChain', 'FAISS', 'OpenAI'],
     demo: 'https://brainwaverag.streamlit.app/',
-    github: 'https://github.com/your-username/brainwave-rag', // Add if public
-    isFeatured: true, // Custom flag to style it differently
+    github: 'https://github.com/your-username/brainwave-rag', // Replace with your actual repo URL if public
+    isFeatured: true,
   },
   {
     title: 'AI Caption & Hashtag Generator',
@@ -39,7 +39,6 @@ const projects = [
     demo: 'https://iamanishsinghrajput-meggi.hf.space',
   },
 ];
-
 
 export const Projects = () => {
   const [ref, inView] = useInView({
@@ -70,7 +69,11 @@ export const Projects = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white dark:bg-gray-900 rounded-lg shadow-lg overflow-hidden"
+              className={`rounded-lg shadow-lg overflow-hidden ${
+                project.isFeatured
+                  ? 'bg-yellow-100 dark:bg-yellow-900 border-2 border-yellow-400'
+                  : 'bg-white dark:bg-gray-900'
+              }`}
             >
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
