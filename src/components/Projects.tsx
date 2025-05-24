@@ -4,6 +4,13 @@ import { ExternalLink, Github } from 'lucide-react';
 
 const projects = [
   {
+    title: '🧠 BrainWave RAG Assistant',
+    description:
+      'An AI-powered assistant that allows users to upload documents or code files and ask intelligent questions. Built using LangChain, Streamlit, and OpenAI, it uses Retrieval-Augmented Generation (RAG) for context-aware responses.',
+    tech: ['Streamlit', 'LangChain', 'OpenAI API', 'FAISS'],
+    demo: 'https://brainwaverag.streamlit.app/',
+  },
+  {
     title: 'AI Caption & Hashtag Generator',
     description: 'Developed an AI-powered tool to generate image captions and trending hashtags using deep learning and NLP techniques.',
     tech: ['Python', 'OpenCV', 'TensorFlow', 'PyTorch'],
