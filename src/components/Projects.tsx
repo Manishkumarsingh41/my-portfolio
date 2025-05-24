@@ -4,9 +4,6 @@ import { ExternalLink, Github } from 'lucide-react';
 
 const projects = [
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     title: '🧠 BrainWave RAG Assistant 🚀 Top Project',
     description:
       'An AI assistant that supports document/code upload and gives smart answers using RAG (LangChain, FAISS, Streamlit, OpenAI).',
@@ -19,75 +16,25 @@ const projects = [
     title: 'AI Caption & Hashtag Generator',
     description:
       'Developed an AI-powered tool to generate image captions and trending hashtags using deep learning and NLP techniques.',
-=======
-=======
-    title: '🧠 BrainWave RAG Assistant',
-=======
-    title: '🧠 BrainWave RAG Assistant 🚀 Top Project',
->>>>>>> c6a624d (Projects.tsx)
-    description:
-      'An AI assistant that supports document/code upload and gives smart answers using RAG (LangChain, FAISS, Streamlit, OpenAI).',
-    tech: ['Streamlit', 'LangChain', 'FAISS', 'OpenAI'],
-    demo: 'https://brainwaverag.streamlit.app/',
-    github: 'https://github.com/your-username/brainwave-rag', // Add if public
-    isFeatured: true, // Custom flag to style it differently
-  },
-  {
->>>>>>> e9af676 (Projects.tsx)
-    title: 'AI Caption & Hashtag Generator',
-<<<<<<< HEAD
-    description: 'Developed an AI-powered tool to generate image captions and trending hashtags using deep learning and NLP techniques.',
->>>>>>> 947c8f7 (Initial commit - uploaded portfolio project)
-=======
-    description:
-      'Developed an AI-powered tool to generate image captions and trending hashtags using deep learning and NLP techniques.',
->>>>>>> c6a624d (Projects.tsx)
     tech: ['Python', 'OpenCV', 'TensorFlow', 'PyTorch'],
     github: 'https://github.com/Manishkumarsingh41/aicaption-hastagtool',
   },
   {
     title: 'Rule-Based Chatbot Response System',
-<<<<<<< HEAD
-<<<<<<< HEAD
     description:
       'Created a chatbot that responds to user queries based on predefined rules and keyword recognition.',
-=======
-    description: 'Created a chatbot that responds to user queries based on predefined rules and keyword recognition.',
->>>>>>> 947c8f7 (Initial commit - uploaded portfolio project)
-=======
-    description:
-      'Created a chatbot that responds to user queries based on predefined rules and keyword recognition.',
->>>>>>> c6a624d (Projects.tsx)
     tech: ['Python', 'Flask', 'NLP'],
   },
   {
     title: 'Face Detection System',
-<<<<<<< HEAD
-<<<<<<< HEAD
     description:
       'Implemented a real-time face detection system that accurately detects and recognizes faces in images and live video feeds.',
-=======
-    description: 'Implemented a real-time face detection system that accurately detects and recognizes faces in images and live video feeds.',
->>>>>>> 947c8f7 (Initial commit - uploaded portfolio project)
-=======
-    description:
-      'Implemented a real-time face detection system that accurately detects and recognizes faces in images and live video feeds.',
->>>>>>> c6a624d (Projects.tsx)
     tech: ['Python', 'OpenCV', 'Haar Cascade Classifiers', 'XML'],
   },
   {
     title: 'Sentiment Analysis Bot',
-<<<<<<< HEAD
-<<<<<<< HEAD
     description:
       "Built a sentiment analysis system capable of classifying text as positive, negative, or neutral using Hugging Face's Transformer models.",
-=======
-    description: "Built a sentiment analysis system capable of classifying text as positive, negative, or neutral using Hugging Face's Transformer models.",
->>>>>>> 947c8f7 (Initial commit - uploaded portfolio project)
-=======
-    description:
-      "Built a sentiment analysis system capable of classifying text as positive, negative, or neutral using Hugging Face's Transformer models.",
->>>>>>> c6a624d (Projects.tsx)
     tech: ['Python', 'Hugging Face', 'NLP'],
     demo: 'https://iamanishsinghrajput-meggi.hf.space',
   },
@@ -117,7 +64,6 @@ export const Projects = () => {
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-8">
-<<<<<<< HEAD
           {projects.map((project, index) => {
             // Extract badge and clean title for featured projects
             let badge = null;
@@ -189,66 +135,8 @@ export const Projects = () => {
               </motion.div>
             );
           })}
-=======
-          {projects.map((project, index) => (
-            <motion.div
-              key={project.title}
-              initial={{ opacity: 0, y: 20 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white dark:bg-gray-900 rounded-lg shadow-lg overflow-hidden"
-            >
-              <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-                <p className="text-gray-600 dark:text-gray-400 mb-4">{project.description}</p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.tech.map((tech) => (
-                    <span
-                      key={tech}
-                      className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-                <div className="flex space-x-4">
-                  {project.github && (
-                    <motion.a
-                      whileHover={{ scale: 1.05 }}
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400"
-                    >
-                      <Github className="w-5 h-5 mr-1" /> Code
-                    </motion.a>
-                  )}
-                  {project.demo && (
-                    <motion.a
-                      whileHover={{ scale: 1.05 }}
-                      href={project.demo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400"
-                    >
-                      <ExternalLink className="w-5 h-5 mr-1" /> Live Demo
-                    </motion.a>
-                  )}
-                </div>
-              </div>
-            </motion.div>
-          ))}
->>>>>>> 947c8f7 (Initial commit - uploaded portfolio project)
         </div>
       </div>
     </section>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
 };
-=======
-};
->>>>>>> 947c8f7 (Initial commit - uploaded portfolio project)
-=======
-};
->>>>>>> e9af676 (Projects.tsx)
